@@ -1,0 +1,11 @@
+<% include top %>
+<%if (typeof fiboval !== "undefined") {%>
+	<p>Fibonacci number for <%= fibonum %> is <%=fiboval%></p>
+	<hr/>
+<%}%>
+<p>Please enter a number to see its' fibonacci number</p>
+<form action="/fibonacci" method="get" accept-charset="utf-8">
+	<input type="text" name="fibonum" placeholder="3">
+	<input type="submit" value="submit">
+</form>
+<%include bottom%>
